@@ -1,1 +1,173 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .big-menu-btn {
+      display: block;
+    }
+    
+    button {
+      width: 60px;
+      height: 30px;
+      background-color: black;
+      color: wheat;
+      text-align: center;
+    }
+    
+    button:hover {
+      background-color: white;
+      color: red;
+    }
+    
+    .content {
+      display: none;
+      text-align: center;
+    }
+    
+    .active {
+      display: block;
+    }
+    
+    #basic {
+      text-align: center;
+      background: black;
+      color: white;
+      padding: 10px;
+    }
+    
+    #navbar {
+      text-align: center;
+      background: black;
+      color: white;
+      position: absolute;
+    }
+    
+    @media (min-width: 600px) {
+      #navbar {
+        padding: 10px;
+      }
+      
+      #navbar ul {
+        float: left;
+      }
+      
+      #navbar ul li {
+        display: inline-block;
+      }
+    }
+    
+    #navbar ul {
+      list-style-type: none;
+    }
+    
+    #navbar li {
+      float: right;
+      margin: 5px;
+    }
+    
+    #content1 > h2 {
+      color: orange;
+    }
+    
+    #content2 > h1 {
+      color: indigo;
+    }
+    
+    #content3 > h2 {
+      color: green;
+    }
+    
+    #footer {
+      background-color: cyan;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      position: fixed;
+      text-align: center;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.big-menu-btn').click(function () {
+        $('#navbar ul').toggle('slow');
+      }).click();
+      
+      $('#page1').click(function () {
+        $('.content').removeClass('active');
+        $('#content1').addClass('active');
+      });
+      
+      $('#page2').click(function () {
+        $('.content').removeClass('active');
+        $('#content2').addClass('active');
+      });
+      
+      $('#page3').click(function () {
+        $('.content').removeClass('active');
+        $('#content3').addClass('active');
+      });
+      
+      $('#content1').addClass('active');
+    });
+  </script>
+  <title>ODY's HomePage</title>
+</head>
+<body>
+<div id="basic">
+  <h1>Wellcome to Dong Yeon O's HomePage!</h1>
+</div>
+<div id="navbar">
+  <button class="big-menu-btn">MENU</button>
+  <ul>
+    <li id="page3"><button>Contect</button></li>
+    <li id="page2"><button>Profile</button></li>
+    <li id="page1"><button>Home</button></li>
+  </ul>
+</div>
+<p style="text-align: right;">-updated 03 June, 2023</p>
+<div class="content" id="content1">
+  <img src="https://github.com/YeonPr/YeonPr.github.io/blob/main/me.png?raw=true" width="400px" height="500px">
+  <h2><i>&#9830; &nbsp; I am a sophomore in the Department of Computer Science and Engineering at Kangwon national university, South Korea. &nbsp; &#9830;</i></h2>
+  <p><b>My hobby is reading books.</b> I like to read novels from various countries in a comfortable atmosphere that I like the most. My favorite writers are Higashino Keigo and Bernard Werber.</p>
+  <p>Also, <b>my hobby is playing games.</b> I like to play various genres of games such as League of Legends with my friends.</p>
+  <p>Lastly, <b>walking is also my hobby.</b> I like it because I can organize various complex thoughts and a little bit of exercise.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<div class="content" id="content2">
+  <img src="https://github.com/YeonPr/YeonPr.github.io/blob/main/c.png?raw=true" width="400px" height="300px">
+  <h1><b> &#9839; Profile </b></h1>
+  
+  <h3>&#10004;<ins> 2001.09.01.</ins> Birth in Daegu</li>
+  <p>&#10004;<ins>2008~2013</ins> Elementary school student in <a href="https://sl.gwe.es.kr">Sunglim</a></p>
+  <p>&#10004;<ins>2014~2016</ins> Middle school student in <a href="https://chuncms.gwe.ms.kr">Chuncheon</a></p>
+  <p>&#10004;<ins>2017~2019</ins> High school student in <a href="https://kanggo.net">Gangwon</a></p>
+  <p>&#10004;<ins>2021~2022</ins> Remove mine department in SMSB in <a href="https://www.army.mil.kr/sites/army/index.do">ROKA</a></p>
+  <p>&#10004;<ins>2020 / 2023~</ins> <a href="https://cse.kangwon.ac.kr">Computer engineering department</a> in KNU</p></h3>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<div class="content" id="content3" style="text-align: center;">
+  <h1>&#9742; Contect</h1>
+  <img src="https://github.com/YeonPr/YeonPr.github.io/blob/main/a.png?raw=true" width="400px" height="400px">
+  <h2>&#9993; Email</h2>
+  <p><b>Google mail: <a href="mailto:dyeon0901@gmail.com">dyeon0901@gmail.com</a></b></p>
+  <p><b>Naver mail: <a href="mailto:dyeon4782@naver.com">dyeon4782@naver.com</a></b></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <img src="https://github.com/YeonPr/YeonPr.github.io/blob/main/b.png?raw=true" width="400px" height="400px">
+  <h2>&#9990; Cellphone</h2>
+  <p><b>010-4791-9244</b></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<div id="footer">
+  <p>Copyright &#169; 2023. DongYeon O (odong (at) kangwon.ac.kr) All rights reserved.</p>
+</div>
+</body>
+</html>
